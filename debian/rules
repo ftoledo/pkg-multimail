@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+# debian/rules for multimail
+
+# Flag updates
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
+DEBUG=1
+%:
+	dh $@
+
+override_dh_installchangelogs:
+	dh_installchangelogs --keep HISTORY.md
