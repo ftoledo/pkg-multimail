@@ -1,6 +1,8 @@
 #!/usr/bin/make -f
 # debian/rules for multimail
 
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
 # Flag updates
 CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
 CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)

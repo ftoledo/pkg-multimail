@@ -1,3 +1,4 @@
+# fix makefile
 diff -upr a/Makefile b/Makefile
 --- a/Makefile.orig	2019-02-21 22:00:59.000000000 -0300
 +++ b/Makefile	2019-08-01 02:40:29.580015603 -0300

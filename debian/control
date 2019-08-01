@@ -2,8 +2,8 @@ Source: multimail
 Section: mail
 Priority: optional
 Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
-Standards-Version: 3.9.8
-Build-Depends: libncurses5-dev, debhelper (>= 10)
+Standards-Version: 4.4.0
+Build-Depends: libncurses5-dev, debhelper (>= 11)
 Vcs-Git: https://github.com/ftoledo/pkg-multimail.git
 Vcs-Browser: https://github.com/ftoledo/pkg-multimail
 Homepage: http://multimail.sourceforge.net
