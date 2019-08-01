@@ -1,11 +1,11 @@
 Source: multimail
 Section: mail
 Priority: optional
-Maintainer: Robert James Clay <jame@rocasa.us>
+Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
 Standards-Version: 3.9.8
 Build-Depends: libncurses5-dev, debhelper (>= 10)
-Vcs-Git: git://anonscm.debian.org/collab-maint/pkg-multimail.git
-Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/pkg-multimail.git
+Vcs-Git: git://github.com/ftoledo/pkg-multimail.git
+Vcs-Browser: https://github.com/ftoledo/pkg-multimail.git
 Homepage: http://multimail.sourceforge.net
 
 Package: multimail

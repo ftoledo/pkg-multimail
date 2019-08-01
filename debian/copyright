@@ -4,7 +4,7 @@ Source: http://multimail.sourceforge.net/
 Upstream-Contact: William McBrine <wmcbrine@gmail.com>
 
 Files: *
-Copyright: 1997-2015, William McBrine <wmcbrine@gmail.com>
+Copyright: 1997-2019, William McBrine <wmcbrine@gmail.com>
  1997, John Zero
  1996-1997, Kolossvary Tamas <thomas@vma.bme.hu>
  1996, Toth Istvan
@@ -16,7 +16,7 @@ Comment: MultiMail was originally developed under Linux by Kolossvary Tamas and
 License: GPL-3+
 
 Files: debian/*
-Copyright: 2018 Fernando Toledo <ragnarok@docksud.com.ar>
+Copyright: 2018-2019 Fernando Toledo <ragnarok@docksud.com.ar>
  2013-2016, Robert James Clay <jame@rocasa.us>
  2000-2010, Peter Karlsson <peterk@debian.org>
  1999-2000, Per Lundberg <plundis@debian.org>

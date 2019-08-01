@@ -1,12 +1,7 @@
---- a/Makefile.orig	2019-01-09 02:25:25.086979517 -0300
-+++ b/Makefile	2019-01-09 02:34:15.503085283 -0300
-@@ -15,10 +15,13 @@ else
- 	POST = strip mm$(E)
- endif
- 
-+# Edited for Debian
-+DESTDIR =
-+
+diff -upr a/Makefile b/Makefile
+--- a/Makefile	2019-02-21 22:00:59.000000000 -0300
++++ b/Makefile	2019-08-01 02:40:29.580015603 -0300
+@@ -18,7 +18,7 @@ endif
  # PREFIX is the base directory under which to install the binary and man
  # page; generally either /usr/local or /usr (or perhaps /opt...).
  
@@ -15,29 +10,22 @@
  
  #--------------------------------------------------------------
  # Defaults are for the standard curses setup:
-@@ -78,7 +81,9 @@ ifeq ($(SYS),DOS)
+@@ -72,7 +72,7 @@ ifeq ($(SYS),DOS)
  		c:\djgpp\bin\cwsdstub.exe+mm mm.exe; del mm
  endif
  
 -HELPDIR = $(PREFIX)/man/man1
-+HELPDIR = $(PREFIX)/share/man/man1
-+DOCDIR = $(PREFIX)/share/doc/multimail
-+
- CPPFLAGS = $(OPTS) -I$(CURS_DIR)
++HELPDIR = $(PREFIX)/share/man1
  O = o
  
-@@ -113,9 +118,13 @@ clean:
+ .SUFFIXES: .cc
+@@ -106,7 +106,8 @@ clean:
  	$(RM) mm$(E)
  
  install::
 -	install -c -s mm $(PREFIX)/bin
-+	install -d $(PREFIX)/bin $(HELPDIR) $(DOCDIR)
++	install -d $(PREFIX)/bin $(HELPDIR)
 +	install -c $(INSTALL_OPTS) mm $(PREFIX)/bin
  	install -c -m 644 mm.1 $(HELPDIR)
  	$(RM) $(HELPDIR)/mmail.1
  	ln $(HELPDIR)/mm.1 $(HELPDIR)/mmail.1
-+	install -m 644 README.md $(DOCDIR)
-+	install -d $(DOCDIR)/colors
-+	cp -a colors/* $(DOCDIR)/colors
- 
- include depend
