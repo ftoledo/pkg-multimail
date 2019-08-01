@@ -1,6 +1,5 @@
-multimail (0.52-0+nmu1) unstable; urgency=medium
+multimail (0.52-1) unstable; urgency=medium
 
-  * Non-maintainer upload.
   * Update to 0.52
 
  -- Fernando Toledo <ragnarok@docksud.com.ar>  Thu, 01 Aug 2019 01:44:49 -0300
@@ -34,7 +33,7 @@ multimail (0.50~20171202-1~1) unstable; urgency=low
     - Add Vcs* entries for the 'collab-maint' repository at anonscm.debian.org.
   * Changes to debian/copyright:
     - Set the 'Format' URL as https.
-    - Update information for Kolossvary Tamas 
+    - Update information for Kolossvary Tamas
     - Rewrite debian/copyright in machine readable format.
   * Add debian/patches/Makefile.patch for new upstream.
   * Update the name of the upstream README.md file in debian/multimail.docs.
