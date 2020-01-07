@@ -1,8 +1,19 @@
-# fix makefile
-diff -upr a/Makefile b/Makefile
---- a/Makefile.orig	2019-02-21 22:00:59.000000000 -0300
-+++ b/Makefile	2019-08-01 02:40:29.580015603 -0300
-@@ -18,7 +18,7 @@ endif
+# Fix prefix and helpdir paths
+# Fix compiler options <jscott@posteo.net>
+--- mmail-0.52/Makefile.orig	2020-01-07 18:42:09.532570753 -0300
++++ mmail-0.52/Makefile	2020-01-07 18:54:50.047222097 -0300
+@@ -9,16 +9,16 @@ isrc = interfac
+ # is for any post-processing that needs doing.
+ 
+ ifeq ($(DEBUG),Y)
+-	OPTS = -g -Wall -pedantic
++	CXXFLAGS += -g -Wall -pedantic
+ else
+-	OPTS = -O2 -Wall -pedantic
++	CXXFLAGS += -O2 -Wall -pedantic
+ 	POST = strip mm$(E)
+ endif
+ 
  # PREFIX is the base directory under which to install the binary and man
  # page; generally either /usr/local or /usr (or perhaps /opt...).
  
@@ -20,6 +31,19 @@ diff -upr a/Makefile b/Makefile
  O = o
  
  .SUFFIXES: .cc
+@@ -88,10 +88,10 @@ arealist.o letterl.o letterw.o lettpost.
+ tagline.o help.o main.o
+ 
+ $(MOBJS) : %.o: $(msrc)/%.cc
+-	$(CXX) $(OPTS) -c $<
++	$(CXX) $(CXXFLAGS) -c $<
+ 
+ $(IOBJS) : %.o: $(isrc)/%.cc
+-	$(CXX) $(OPTS) -I$(CURS_DIR) -c $<
++	$(CXX) $(CXXFLAGS) -I$(CURS_DIR) -c $<
+ 
+ mm$(E):	$(MOBJS) $(IOBJS)
+ 	$(CXX) -o mm$(E) $(MOBJS) $(IOBJS) $(LIBS)
 @@ -106,7 +106,8 @@ clean:
  	$(RM) mm$(E)
  

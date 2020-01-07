@@ -2,6 +2,7 @@ multimail (0.52-1) unstable; urgency=medium
 
   * Update to 0.52
   * New maintainer. (Closes: #693230)
+  * Add patch to correct compiler parameters
 
  -- Fernando Toledo <ragnarok@docksud.com.ar>  Thu, 01 Aug 2019 01:44:49 -0300
 

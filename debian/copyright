@@ -16,10 +16,12 @@ Comment: MultiMail was originally developed under Linux by Kolossvary Tamas and
 License: GPL-3+
 
 Files: debian/*
-Copyright: 2018-2019 Fernando Toledo <ragnarok@docksud.com.ar>
+Copyright: 2018-2020 Fernando Toledo <ragnarok@docksud.com.ar>
+ 2020     , John Scott <jscott@posteo.net>
  2013-2016, Robert James Clay <jame@rocasa.us>
  2000-2010, Peter Karlsson <peterk@debian.org>
  1999-2000, Per Lundberg <plundis@debian.org>
+Comment: Thanks John Scott for Makefile patch
 License: GPL-3+
 
 Files: mmail/bluewave.h
